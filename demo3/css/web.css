@@ -1,0 +1,59 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: darksalmon;
+  background-image: url("../design/texture4.gif");
+  background-repeat: repeat;
+}
+
+h1 {
+  border-style: outset;
+  border-width: 5px;
+  border-color: red;
+  background-color: rgb(0, 255, 13);
+  opacity: 0.5
+}
+
+h2 {
+  margin: 20px 0px 40px 50px;
+  padding: 4px 10px 4px 30px;
+  border-style: none none none solid;
+  border-width: 20px;
+  border-color: rgba(128, 128, 128, 0.582);
+  background-color: #0d3c2f95;
+  background-image: url("../design/light-wool.png");
+}
+
+ul {
+  padding: 20px 20px 20px 100px;
+  background-color: rgba(246, 255, 0, 0.426);
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.511) inset;
+}
+
+li {
+  background-color: rgb(221, 0, 255);
+}
+
+p {
+  margin: 100px 20px 100px 20px;
+  border-style: solid;
+  border-width: 30px 2px 10px 5px;
+  background-color: rgb(30, 0, 255);
+  background-image: url("../medias/iut.png");
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+i {
+  background-color: rgb(187, 0, 255);
+}
+
+img {
+  border-radius: 5px 100px 5px 100px;
+  outline: double rgba(0, 0, 255, 0.461) 5px;
+  outline-offset: 15px;
+  background-color: red;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.511);
+}

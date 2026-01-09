@@ -1,0 +1,213 @@
+/*------------------------------------------------------------------------------
+	WEB : page design
+------------------------------------------------------------------------------*/
+
+
+
+/*==============================
+	Layout
+==============================*/
+
+/* Wrapper */
+.wrapper {
+	width: 1200px;
+	min-height: 100vh;
+	margin: 0 auto 0 auto;
+	padding: 40px;
+	background-color: #CCCCCC;
+}
+
+
+
+/*==============================
+	Style
+==============================*/
+
+/* Set font */
+* {
+	box-sizing: border-box;
+	font-family: "Arial", "Helvetica", Palatino, sans-serif;
+}
+
+
+
+/* Body */
+body {
+	background-color: #F9F9F9;
+	background-image: url("../medias/asia1.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+
+/* Header */
+header {
+	background-color: #FFFFFF;
+}
+header > h1 {
+	padding: 40px;
+	font-size: 40px;
+	font-weight: bolder;
+	text-align: center;
+}
+header > h2 {
+	padding: 20px;
+	font-size: 20px;
+	font-weight: bolder;
+	font-style: italic;
+	text-align: center;
+	color: #BBBBBB;
+}
+
+
+
+/* Nav */
+nav {
+	z-index: 2;
+	position: sticky;
+	top: 0px;
+	margin: 10px 0 50px 0;
+	background-color: #333333;
+}
+nav > ul > li {
+	display: inline-block;
+	padding: 20px;
+}
+nav > ul > li:hover {
+	background-color: #AAAAAA;
+}
+nav > ul > li:active, .active {
+	background-color: #000000;
+}
+nav > ul > li > a {
+	color: #FFFFFF;
+}
+
+
+
+/* Section */
+section {
+	display: inline-block;
+	width: 750px;
+}
+
+
+
+/* Article */
+article {
+	margin: 0 0 40px 0;
+	padding: 20px;
+	background-color: #FFFFFF;
+}
+
+
+
+/* Aside */
+aside {
+	display: inline-block;
+	width: 320px;
+	margin: 0 0 0 40px;
+}
+aside h2 {
+	position: static;
+}
+aside h3 {
+	margin: 30px 0 0 0;
+	color: #AAAAAA;
+	font-size: 20px;
+	font-style: normal;
+	text-align: right;
+}
+aside p {
+	color: #AAAAAA;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* Footer */
+footer {
+	padding: 30px;
+	background-color: #AAAAAA;
+}
+footer > p {
+	margin: 0;
+	font-size: 30px;
+	font-weight: bolder;
+	text-align: center;
+}
+footer > p.copyright {
+	color: white;
+	font-size: 10px;
+	font-style: italic;
+	text-align: right;
+}
+
+
+
+/* Titles */
+h2 {
+	z-index: 1;
+	position: sticky;
+	top: 80px;
+	margin: 10px;
+	background-color: #ffffff80;
+	font-size: 40px;
+}
+
+h3 {
+	margin: 10px;
+	font-size: 15px;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+/* Standard */
+p {
+	margin: 40px;
+	text-align: justify;
+	color: #808080;
+	line-height: 1.5;
+}
+
+img {
+	display: block;
+	width: 80%;
+	margin: 30px auto 30px auto;
+	outline: solid #DDDDDD 1px;
+	outline-offset: 10px;
+	opacity: 0.5;
+	/* clip-path: polygon(0% 0%, 90% 0%, 100% 40%, 100% 100%, 10% 100%, 0% 60%); */
+}
+img.twoCols {
+	display: inline-block;
+	width: 250px;
+	height: 175px;
+	margin: 50px;
+	object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+article ul {
+	padding-left: 20px;
+	list-style: square;
+	font-size: 16px;
+}
+article ul li {
+	padding: 3px;
+	color: grey;
+}
