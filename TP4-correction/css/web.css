@@ -1,0 +1,349 @@
+/*------------------------------------------------------------------------------
+	WEB : page design
+------------------------------------------------------------------------------*/
+
+
+
+/*==============================
+	Layout
+==============================*/
+
+/* Wrapper & body */
+.wrapper {
+	min-height: 100vh;
+	max-width: 1200px;
+}
+body > img {
+	z-index: -2;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+/* Header */
+header {
+	display: flex;
+	position: sticky;
+	top: 0;
+	min-height: 80px;
+	justify-content: space-between;
+	align-items: center;
+}
+header h1 {
+	flex-basis: 300px;
+	flex-shrink: 0;
+}
+header nav {
+	flex-basis: 100%;
+	padding: 0 10% 0 0;
+}
+header nav ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Section */
+section {
+	padding: 1px 10% 1px 25%;
+}
+section h2 {
+	width: 300px;
+	height: 80px;
+}
+
+/* Aside */
+aside {
+	display: none;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+}
+
+/* Footer */
+footer ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+
+
+
+/*==============================
+	Style
+==============================*/
+
+/* Set font */
+* {
+	font-family: 'Ubuntu', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+}
+
+/* Wrapper & body */
+.wrapper {
+	background-color: #FFFFFF;
+}
+body {
+	background-color: #FFFFFF;
+}
+body > img {
+	opacity: 0.1;
+}
+
+/* Header */
+header {
+	background-color: #FFFFFFEE;
+}
+header h1 {
+	padding: 23px 0 20px 0;
+	font-family: 'Handlee', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+	font-size: 20px;
+	color: #000000;
+	word-spacing: 3px;
+	text-align: center;
+	text-transform: uppercase;
+}
+header h1 span {
+	font-family: 'Handlee', 'Arial', 'Helvetica', 'Palatino', sans-serif;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #CCCCCC;
+	text-transform: uppercase;
+}
+header nav ul li {
+	padding: 20px;
+}
+header nav ul li a {
+	font-size: 16px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+
+
+/* Section */
+section {
+
+}
+section article {
+	padding: 0 0 100px 0;
+	margin: 0 0 100px 0;
+	border-style: none none solid none;
+	border-color: #EEEEEE;
+	border-width: 1px;
+}
+section article:last-of-type {
+	border-style: none;
+}
+section article ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+
+/* Titles */
+section h1 {
+	width: 300px;
+	margin: 150px 0;
+	font-size: 30px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+section h2 {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+
+
+
+/* Aside */
+aside {
+	padding: 20vh 2vw;
+	color: rgb(0, 0, 0, 0.1);
+	font-weight: bolder;
+	font-size: 30px;
+	text-align: right;
+	line-height: 2;
+}
+
+
+
+
+/* Text & Images*/
+p {
+	margin: 20px 0 0 0;
+	line-height: 1.5;
+	color: #777777;
+	text-align: justify;
+}
+a {
+	color: #BBBBBB;
+	transition: 100ms;
+}
+a:hover {
+	color: #777777
+}
+a:active, a.active {
+	color: #000000
+}
+section img {
+	display: block;
+	width: 50%;
+	min-width: 300px;
+	margin: 100px auto;
+	outline: solid 1px #EEEEEE;
+	outline-offset: 50px;
+}
+
+
+
+
+/* Input */
+input, textarea {
+	display: block;
+	width: 70%;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #F9F9F9;
+	color: #999999;
+	transition: 100ms;
+}
+textarea {
+	resize: none;
+}
+input:hover, textarea:hover {
+	background-color: #F5F5FF;
+}
+input:focus, textarea:focus {
+	background-color: #EEEEFF;
+	outline: solid 1px #DDDDFF;
+	outline-offset: 2px;
+	color: #9999FF;
+}
+input:invalid, textarea:invalid {
+	background-color: #FFEEEE;
+	outline: solid 1px #FFDDDD;
+	outline-offset: 2px;
+	color: #FF9999;
+}
+
+
+
+
+
+/* Footer */
+footer {
+	margin: 0;
+	padding: 20px 0;
+	background-color: #00000077;
+}
+footer ul li {
+	padding: 3px 50px;
+	border-style: none solid none solid;
+	border-color: #AAAAAA;
+	border-width: 1px;
+	font-weight: lighter;
+	text-align: center;
+}
+footer ul li:first-of-type {
+	border-style: none;
+}
+
+
+
+
+
+/*==============================
+	Classes
+==============================*/
+
+.twoCols {
+	display: inline-block;
+	width: 49%;
+	padding: 0 30px;
+}
+.twoCols img {
+	width: 100%;
+	min-width: 0;
+	margin: 60px 0;
+	border: none;
+	outline: none;
+}
+
+
+
+/*==============================
+	Responsive design
+==============================*/
+
+/* Media query : mobile */
+@media (max-width: 600px) {
+	/* Header */
+	header {
+		position: static;
+		align-items: flex-start;
+	}
+	header nav ul {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	header nav ul li {
+		flex-basis: 100%;
+	}
+
+	/* Section */
+	section {
+		padding: 1px 10% 1px 10%;
+	}
+
+	/* Footer */
+	footer ul{
+		flex-wrap: wrap;
+	}
+	footer ul li {
+		flex-basis: 100%;
+		text-align: right;
+	}
+}
+
+
+
+/* Media query : tablet */
+@media (min-width: 600px) and (max-width: 1200px) {
+	header {
+		flex-wrap: wrap;
+	}
+
+}
+
+
+
+/* Media query : laptop */
+@media (min-width: 1200px) {
+	header nav {
+		padding: 0 10% 0 300px;
+	}
+
+	section h2 {
+		position: sticky;
+		top: 0;
+	}
+}
+
+
+
+/* Media query : laptop */
+@media (min-width: 1600px) {
+	aside {
+		display: block;
+	}
+}
