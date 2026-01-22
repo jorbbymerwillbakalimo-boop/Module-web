@@ -1,6 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+<head><!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clash of Clans - Reproduction</title>
+
+  <link rel="icon" type="image/png" href="./medias/iut.png">
+  <link rel="stylesheet" href="./css/web.css">
+
+  <!-- Optionnel si ton prof te les impose -->
+  <!-- <link rel="stylesheet" href="./css/02_fonts.css"> -->
+  <!-- <link rel="stylesheet" href="./css/03_icons.css"> -->
+
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <script src="./js/web.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER (NAV + HERO) -->
+  <header class="site-header">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container navbar__inner">
+
+        <!-- Logo -->
+        <a class="navbar__logo" href="#">
+          <img src="./medias/supercell_logo.webp" alt="Supercell">
+        </a>
+
+        <!-- Liens -->
+        <ul class="navbar__links">
+          <li><a href="#">Games</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+
+        <!-- Icônes -->
+        <ul class="navbar__icons">
+          <li><a href="#"><img src="./medias/icone1 nav.svg" alt="Creators"></a></li>
+          <li><a href="#"><img src="./medias/icone 2 nav.svg" alt="Make"></a></li>
+          <li><a href="#"><img src="./medias/icone 3 nav.svg" alt="ID"></a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <img class="hero__bg" src="./medias/header.jpg" alt="">
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <img class="hero__fg" src="./medias/header2.png" alt="Clash of Clans">
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#">Download</a>
+          <a class="btn btn--ghost" href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SECTION 1 -->
+    <section class="section">
+      <div class="container split">
+        <div class="split__text">
+          <h2 class="title">LEAD YOUR CLAN TO VICTORY!</h2>
+          <p class="lead">
+            Answer the call of the mustache! Join the international fray that is Clash of Clans and the Clash® universe.
+            Customize your village, build an army and crush your opponents. Join a Clan, or create your own legacy.
+          </p>
+        </div>
+
+        <div class="split__media">
+          <img src="./medias/portable 1er.png" alt="Game on mobile">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION NEWS -->
+    <section class="section section--muted">
+      <div class="container">
+        <h2 class="title">Clash® News</h2>
+
+        <div class="cards">
+          <article class="card">
+            <img class="card__img" src="./medias/section partiie 2.png" alt="">
+            <div class="card__body">
+              <h3 class="card__title">Update Notes</h3>
+              <p class="card__text">Latest changes, balance updates and improvements.</p>
+              <a class="card__link" href="#">Read more</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="./medias/section partie 3.png" alt="">
+            <div class="card__body">
+              <h3 class="card__title">Events & Community</h3>
+              <p class="card__text">Follow events, announcements and community highlights.</p>
+              <a class="card__link" href="#">Read more</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION SOCIAL -->
+    <section class="section">
+      <div class="container split split--reverse">
+        <div class="split__text">
+          <h2 class="title">SEE THE LATEST</h2>
+          <p class="lead">
+            To stay on top of your game, keep an eye on the in-game News section.
+            Follow us on social media for the latest chatter and sneak peeks.
+          </p>
+
+          <h3 class="subtitle">FOLLOW CLASH OF CLANS ON</h3>
+
+          <div class="social">
+            <a class="social__item" href="#"><img src="./medias/some_reddit.dbd15d85.webp" alt="Reddit"></a>
+            <a class="social__item" href="#"><img src="./medias/some_youtube.6b5d0c55.webp" alt="YouTube"></a>
+            <a class="social__item" href="#"><img src="./medias/some_facebook.82dbdf8f.png" alt="Facebook"></a>
+            <a class="social__item" href="#"><img src="./medias/some_instagram.73b957d1.webp" alt="Instagram"></a>
+            <a class="social__item" href="#"><img src="./medias/some_twitter.4a955afb.png" alt="X"></a>
+            <a class="social__item" href="#"><img src="./medias/some-discord.svg" alt="Discord"></a>
+          </div>
+        </div>
+
+        <div class="split__media">
+          <img src="./medias/bannière pour portable.webp" alt="Banner">
+          <img class="stacked" src="./medias/portable.png" alt="Mobile">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION VIDEOS -->
+    <section class="section section--muted">
+      <div class="container">
+        <h2 class="title">Videos</h2>
+
+        <ul class="videos">
+          <li class="videos__item"><img src="./medias/1er video.jpg" alt=""></li>
+          <li class="videos__item"><img src="./medias/2eme video.webp" alt=""></li>
+          <li class="videos__item"><img src="./medias/3eme video.jpg" alt=""></li>
+          <li class="videos__item"><img src="./medias/4eme video.webp" alt=""></li>
+          <li class="videos__item"><img src="./medias/5eme video.webp" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container cta">
+        <h2 class="title">INTERESTED IN WORKING WITH US?</h2>
+        <a class="btn btn--primary" href="#">SEE ALL POSITIONS</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div>
+        <p class="footer__label">Follow us on</p>
+
+        <div class="footer__social">
+          <a href="#"><img src="./medias/some_youtube.6b5d0c55.webp" alt=""></a>
+          <a href="#"><img src="./medias/some_facebook.82dbdf8f.png" alt=""></a>
+          <a href="#"><img src="./medias/some_instagram.73b957d1.webp" alt=""></a>
+          <a href="#"><img src="./medias/some_twitter.4a955afb.png" alt=""></a>
+          <a href="#"><img src="./medias/some_linkedin.ad862f8c.png" alt=""></a>
+          <a href="#"><img src="./medias/some_glassdoor.3e4af2f0.webp" alt=""></a>
+        </div>
+      </div>
+
+      <div class="footer__stores">
+        <img src="./medias/app store logo.png" alt="App Store">
+        <img src="./medias/Google Play logo.png" alt="Google Play">
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <ul class="footer__links">
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Parents Guide</a></li>
+        <li><a href="#">Safe and Fair Play</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Cookie Settings</a></li>
+      </ul>
+
+      <div class="footer__address">
+        <p>Supercell Oy</p>
+        <p>Jätkäsaarenlaituri 1</p>
+        <p>00180 Helsinki</p>
+        <p>Finland</p>
+      </div>
+
+      <div class="footer__brand">
+        <img src="./medias/supercell_logo.webp" alt="Supercell">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clash of Clans - Reproduction</title>
