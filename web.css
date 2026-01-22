@@ -1,181 +1,415 @@
-/*------------------------------------------------------------------------------
-	WEB : page design
-------------------------------------------------------------------------------*/
-
-
-
-
-
-/*==============================
-	Layout
-==============================*/
-
-/* Body & Wrapper */
-/* Reset minimal */
+/* =========================
+   RESET / BASE
+========================= */
 * { box-sizing: border-box; }
-body { margin: 0; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
 /* =========================
-   NAVBAR (style Supercell)
+   NAVBAR
 ========================= */
-
-.navbar {
-  position: sticky;     /* reste en haut au scroll */
+.navbar{
+  position: sticky;
   top: 0;
   z-index: 1000;
-
   background: #0b0b0b;
-  padding: 14px 24px;
+}
 
-  display: flex;                 /* Flexbox */
-  align-items: center;           /* alignement vertical */
-  justify-content: space-between;/* espace entre zones */
+.navbar__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height: 56px;
   gap: 24px;
 }
 
 /* Logo */
-.navbar__logo img {
+.navbar__logo img{
   height: 26px;
   width: auto;
-  display: block;
 }
 
-/* Liens au centre */
-.navbar__links {
+/* Links */
+.navbar__links,
+.navbar__icons{
   list-style: none;
   margin: 0;
   padding: 0;
 
-  display: flex;
-  align-items: center;
-  gap: 22px;
+  display:flex;
+  align-items:center;
 }
 
-.navbar__links a {
-  color: #b7b7b7;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+.navbar__links{ gap: 22px; }
+.navbar__icons{ gap: 14px; }
+
+.navbar__links a{
+  color:#b7b7b7;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.3px;
+  padding: 10px 6px;
 }
 
-.navbar__links a:hover {
-  color: #ffffff;
-}
+.navbar__links a:hover{ color:#fff; }
 
-/* Icônes à droite */
-.navbar__icons {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.navbar__icons img {
+.navbar__icons img{
   height: 18px;
   width: 18px;
-  display: block;
   opacity: 0.9;
 }
 
-.navbar__icons a:hover img {
-  opacity: 1;
-}
+.navbar__icons a:hover img{ opacity: 1; }
 
 /* =========================
-   HERO (images header)
+   HERO
 ========================= */
-
-.hero {
+.hero{
   position: relative;
-  height: 520px;     /* ajuste si besoin */
+  height: 520px;
   overflow: hidden;
   background: #000;
 }
 
-.hero__bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* image couvre la zone */
-  
+.hero__bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
 }
 
-.hero__fg {
-  position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20%;
-    min-width: 300px;
-    min-height: 130px;
-    max-height: 120px;
-    object-fit: contain;
-  
+.hero__overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}
+
+.hero__content{
+  position: relative;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  gap: 18px;
+  z-index: 1;
+}
+
+.hero__fg{
+  width: min(420px, 70%);
+  height: auto;
+}
+
+.hero__cta{
+  display:flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn--primary{
+  background:#ffffff;
+  color:#111;
+}
+
+.btn--ghost{
+  border: 2px solid #fff;
+  color:#fff;
+  background: transparent;
 }
 
 /* =========================
-   Responsive simple
+   SECTIONS / TYPO
 ========================= */
-
-@media (max-width: 900px) {
-  .navbar__links { display: none; } /* comme Supercell: menu mobile */
-  .hero { height: 420px; }
+.section{
+  padding: 64px 0;
 }
 
+.section--muted{
+  background: #f5f6f7;
+}
 
+.title{
+  margin: 0 0 14px 0;
+  font-size: 32px;
+  letter-spacing: 0.2px;
+}
 
+.subtitle{
+  margin: 22px 0 12px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 
+.lead{
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  max-width: 60ch;
+}
 
+/* Split (2 colonnes) */
+.split{
+  display:flex;
+  align-items:center;
+  gap: 48px;
+}
 
-/*==============================
-	Debug
-==============================*/
-/* .wrapper {
-	background-color: bisque;
+.split__text{ flex: 1; }
+.split__media{ flex: 1; }
+
+.split--reverse{
+  flex-direction: row-reverse;
 }
-header {
-	background-color: crimson;
+
+/* Petite superposition visuelle optionnelle */
+.stacked{
+  margin-top: 18px;
 }
-nav {
-	background-color: gold;
+
+/* =========================
+   NEWS CARDS
+========================= */
+.cards{
+  margin-top: 18px;
+  display:flex;
+  gap: 18px;
 }
-section {
-	background-color: lawngreen;
+
+.card{
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
-article {
-	background-color: aqua;
+
+.card__img{
+  width:100%;
+  height: 220px;
+  object-fit: cover;
 }
-aside {
-	background-color: cornflowerblue;
+
+.card__body{
+  padding: 18px;
 }
-footer {
-	background-color: lightcoral;
+
+.card__title{
+  margin: 0 0 8px 0;
+  font-size: 18px;
 }
-span {
-	background-color: #88888888;
+
+.card__text{
+  margin: 0 0 12px 0;
+  color:#444;
+  line-height: 1.5;
 }
-ul {
-	background-color: darkslateblue;
+
+.card__link{
+  text-decoration:none;
+  font-weight: 700;
+  color:#111;
 }
-li {
-	background-color: darkorchid;
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.social{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
 }
-h1 {
-	background-color: orange;
+
+.social__item{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: #111;
 }
-h2, h3, h4 {
-	background-color: chocolate;
+
+.social__item img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
-p {
-	background-color: lightblue;
+
+/* =========================
+   VIDEOS GRID
+========================= */
+.videos{
+  list-style:none;
+  margin: 18px 0 0 0;
+  padding: 0;
+
+  display:flex;
+  gap: 14px;
+  overflow-x: auto;
 }
-a {
-	background-color: royalblue;
+
+.videos__item{
+  flex: 0 0 240px;
+  border-radius: 16px;
+  overflow:hidden;
+  background: #000;
 }
-img {
-	background-color: deeppink;
-	width: 150px;
-} */
+
+.videos__item img{
+  width:100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+  background:#0b0b0b;
+  color:#fff;
+  padding: 40px 0;
+}
+
+.footer__label{
+  margin: 0 0 10px 0;
+  color: #b7b7b7;
+}
+
+.footer__top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer__social{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__social img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.footer__stores{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+}
+
+.footer__stores img{
+  height: 42px;
+  width: auto;
+}
+
+.footer__bottom{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 24px;
+  padding-top: 22px;
+}
+
+.footer__links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  max-width: 520px;
+}
+
+.footer__links a{
+  color:#b7b7b7;
+  text-decoration:none;
+  font-size: 13px;
+}
+
+.footer__links a:hover{ color:#fff; }
+
+.footer__address p{
+  margin: 0 0 6px 0;
+  color:#b7b7b7;
+  font-size: 13px;
+}
+
+.footer__brand img{
+  height: 22px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px){
+  .navbar__links{ display:none; }
+  .hero{ height: 420px; }
+
+  .split{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards{
+    flex-direction: column;
+  }
+
+  .cta{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__top,
+  .footer__bottom{
+    flex-direction: column;
+  }
+}
