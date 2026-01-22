@@ -1,0 +1,181 @@
+/*------------------------------------------------------------------------------
+	WEB : page design
+------------------------------------------------------------------------------*/
+
+
+
+
+
+/*==============================
+	Layout
+==============================*/
+
+/* Body & Wrapper */
+/* Reset minimal */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* =========================
+   NAVBAR (style Supercell)
+========================= */
+
+.navbar {
+  position: sticky;     /* reste en haut au scroll */
+  top: 0;
+  z-index: 1000;
+
+  background: #0b0b0b;
+  padding: 14px 24px;
+
+  display: flex;                 /* Flexbox */
+  align-items: center;           /* alignement vertical */
+  justify-content: space-between;/* espace entre zones */
+  gap: 24px;
+}
+
+/* Logo */
+.navbar__logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+/* Liens au centre */
+.navbar__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar__links a {
+  color: #b7b7b7;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.navbar__links a:hover {
+  color: #ffffff;
+}
+
+/* Icônes à droite */
+.navbar__icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar__icons img {
+  height: 18px;
+  width: 18px;
+  display: block;
+  opacity: 0.9;
+}
+
+.navbar__icons a:hover img {
+  opacity: 1;
+}
+
+/* =========================
+   HERO (images header)
+========================= */
+
+.hero {
+  position: relative;
+  height: 520px;     /* ajuste si besoin */
+  overflow: hidden;
+  background: #000;
+}
+
+.hero__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image couvre la zone */
+  
+}
+
+.hero__fg {
+  position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    min-width: 300px;
+    min-height: 130px;
+    max-height: 120px;
+    object-fit: contain;
+  
+}
+
+/* =========================
+   Responsive simple
+========================= */
+
+@media (max-width: 900px) {
+  .navbar__links { display: none; } /* comme Supercell: menu mobile */
+  .hero { height: 420px; }
+}
+
+
+
+
+
+
+/*==============================
+	Debug
+==============================*/
+/* .wrapper {
+	background-color: bisque;
+}
+header {
+	background-color: crimson;
+}
+nav {
+	background-color: gold;
+}
+section {
+	background-color: lawngreen;
+}
+article {
+	background-color: aqua;
+}
+aside {
+	background-color: cornflowerblue;
+}
+footer {
+	background-color: lightcoral;
+}
+span {
+	background-color: #88888888;
+}
+ul {
+	background-color: darkslateblue;
+}
+li {
+	background-color: darkorchid;
+}
+h1 {
+	background-color: orange;
+}
+h2, h3, h4 {
+	background-color: chocolate;
+}
+p {
+	background-color: lightblue;
+}
+a {
+	background-color: royalblue;
+}
+img {
+	background-color: deeppink;
+	width: 150px;
+} */
