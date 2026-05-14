@@ -1,7 +1,7 @@
 # 🌐 Module Web — BUT R&T 1ère année
 
 Ressources du module **R209 – Initiation au développement Web** (BUT Réseaux & Télécommunications, Semestre 1).  
-IUT de Kourou · 2024–2025 · Bakalimo Jorbby
+IUT de Kourou · 2025–2026 · Bakalimo Jorbby
 
 ---
 
